@@ -74,7 +74,7 @@ gulp.task('watch', function () {
 	connect.server({
 		root: 'dist',
 		livereload: true,
-		host: '172.30.66.122',
+		// host: '172.30.66.122',
 		port: 8001
 	})
 })
