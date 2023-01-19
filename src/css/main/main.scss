@@ -20,32 +20,17 @@
 			}
 		}
 		.offcanvas-body {
-			// padding: 0;
-			// padding-bottom: 1rem;
-			// margin: 0 1rem;
-
-			// overflow-x: scroll;
-
-			// ul {
-			// 	height: 100%;
-			// 	white-space: nowrap;
-			// 	li {
-			// 		display: inline-block;
-			// 		height: 100%;
-			// 		img {
-			// 			display: block;
-			// 			width: auto;
-			// 			height: 100%;
-			// 			object-fit: cover;
-			// 		}
-			// 		&:not(:last-child) {
-			// 			margin-right: 0.5rem;
-			// 		}
-			// 	}
-			// }
+			padding: 0;
+			padding-bottom: 1rem;
+			margin: 0 1rem;
 			&.my-photo-swiper {
 				.swiper-wrapper {
 					height: 100%;
+					-webkit-transition-timing-function: linear;
+					-moz-transition-timing-function: linear;
+					-ms-transition-timing-function: linear;
+					-o-transition-timing-function: linear;
+					transition-timing-function: linear;
 					.swiper-slide {
 						width: auto;
 						height: 100%;
@@ -55,12 +40,37 @@
 							height: 100%;
 							object-fit: cover;
 						}
-						&:not(:last-child) {
-							margin-right: 0.5rem;
-						}
+						// &:not(:last-child) {
+						// 	margin-right: 0.5rem;
+						// }
 					}
+				}
+				&::-webkit-scrollbar {
+					display: none;
 				}
 			}
 		}
 	}
+}
+
+.fade {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all .2s;
+}
+
+#PhotoModal {
+	.modal-dialog {
+		// width: 92%;
+		// margin: auto;
+		// max-width: 40rem;
+		.modal-body {
+			img {
+				display: block;
+				width: 100%;
+				margin: 0 auto;
+			}
+		}
+	}
+
 }

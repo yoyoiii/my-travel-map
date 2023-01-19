@@ -1,4 +1,5 @@
 #Bmap
+
 #TravelPhotos
 	button.btn.btn-primary(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop") Toggle top offcanvas
 	#offcanvasTop.offcanvas.offcanvas-top(tabindex="-1" aria-labelledby="offcanvasTopLabel" data-bs-scroll="true" data-bs-backdrop="false")
@@ -7,28 +8,13 @@
 			button.btn-close(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
 		.offcanvas-body.swiper.my-photo-swiper
 			.swiper-wrapper
-				.swiper-slide
-					img(src="https://picx.zhimg.com/80/v2-a9438f5701a372d882854a7cb0da8e21_720w.webp?source=1940ef5c" alt="")
-				.swiper-slide
-					img(src="https://pic1.zhimg.com/80/v2-4ec57336523792aba0c7dbf053c41c2f_720w.webp?source=1940ef5c" alt="")
-				.swiper-slide
-					img(src="https://pica.zhimg.com/80/v2-44cb0b2cbedfa7bb1b26836facae822d_720w.webp?source=1940ef5c" alt="")
-				.swiper-slide
-					img(src="https://picx.zhimg.com/80/v2-e7fca9415fd1a0a5e4a0ec0fbcc8a7b1_720w.webp?source=1940ef5c" alt="")
-				.swiper-slide
-					img(src="https://picx.zhimg.com/80/v2-761275ff82f258be9b4720e94e54cbb1_720w.webp?source=1940ef5c" alt="")
-				.swiper-slide
-					img(src="https://pica.zhimg.com/v2-ecabfe225f652d60889fbc18cb1b74e3_r.jpg?source=1940ef5c" alt="")
-			//- ul
-			//- 	li.item-photo
-			//- 		img(src="https://picx.zhimg.com/80/v2-a9438f5701a372d882854a7cb0da8e21_720w.webp?source=1940ef5c" alt="")
-			//- 	li.item-photo
-			//- 		img(src="https://pic1.zhimg.com/80/v2-4ec57336523792aba0c7dbf053c41c2f_720w.webp?source=1940ef5c" alt="")
-			//- 	li.item-photo
-			//- 		img(src="https://pica.zhimg.com/80/v2-44cb0b2cbedfa7bb1b26836facae822d_720w.webp?source=1940ef5c" alt="")
-			//- 	li.item-photo
-			//- 		img(src="https://picx.zhimg.com/80/v2-e7fca9415fd1a0a5e4a0ec0fbcc8a7b1_720w.webp?source=1940ef5c" alt="")
-			//- 	li.item-photo
-			//- 		img(src="https://picx.zhimg.com/80/v2-761275ff82f258be9b4720e94e54cbb1_720w.webp?source=1940ef5c" alt="")
-			//- 	li.item-photo
-			//- 		img(src="https://pica.zhimg.com/v2-ecabfe225f652d60889fbc18cb1b74e3_r.jpg?source=1940ef5c" alt="")
+				- const { travel_photos } = main
+				each url in travel_photos
+					.swiper-slide(data-bs-toggle="modal" data-bs-target="#PhotoModal" data-bs-src=`https://pic.imgdb.cn/item/${url}`)
+						img(src=`https://pic.imgdb.cn/item/${url}` alt="")
+
+#PhotoModal.modal.fade(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered.modal-lg
+		.modal-body
+			img.madal-img(src="" alt="")
+

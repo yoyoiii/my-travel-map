@@ -15,7 +15,7 @@ sass.compiler = require('node-sass')
 const config = require('./config.json')
 
 gulp.task('clean', function () {
-	return del(['./dist/css/', './dist/js/'])
+	return del(['./dist/assets/', './dist/css/', './dist/js/'])
 })
 
 gulp.task('css', function () {
@@ -42,7 +42,7 @@ gulp.task('js', function () {
 		.pipe(babel({ presets: ['@babel/preset-env'] }))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
-})
+		})
 
 gulp.task('pug', function () {
 	return gulp
@@ -55,12 +55,6 @@ gulp.task('assets', function () {
 	return gulp
 		.src(['./src/assets/**/*'])
 		.pipe(gulp.dest('./dist/assets'));
-})
-
-gulp.task('config', function () {
-	return gulp
-		.src('./src/addr.json')
-		.pipe(gulp.dest('./dist'));
 })
 
 gulp.task('build', gulp.series('clean', 'assets', 'pug', 'css', 'js', 'html'))

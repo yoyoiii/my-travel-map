@@ -1,3 +1,4 @@
+
 const BMAP_AK = 'x21SV8yA2b10uiY6A13aqvuDEA3jp804';
 
 $(function () {
@@ -8,6 +9,7 @@ let page = {
 	MAKERS: [],
 	init: () => {
 		page.mountMap();
+		page.setSwiperPhotos();
 		page.loadEvent();
 	},
 
@@ -107,17 +109,39 @@ let page = {
 		})
 	},
 
-	loadEvent: () => {
+	setSwiperPhotos: () => {
 		const mySwiper = new Swiper('.my-photo-swiper', {
-			slidesPerView : 'auto',
-			spaceBetween: 15,
+			slidesPerView: 'auto',
+			spaceBetween: 10,
 			autoplay: {
-				delay: 2000,
+				delay: 0,
 				disableOnInteraction: false,
-				waitForTransition: false,
-				pauseOnMouseEnter: true,
+				// waitForTransition: false,
 			},
+			speed: 5000,
+			loop: true,
+		})
 
+		//鼠标覆盖停止自动切换
+		// mySwiper.el.onmouseover = function(){
+		// 	mySwiper.autoplay.stop();
+		// }
+
+		//鼠标离开开始自动切换
+		// mySwiper.el.onmouseout = function(){
+		// 	mySwiper.autoplay.start();
+		// }
+
+
+	},
+
+	loadEvent: () => {
+		const PhotoModal = document.getElementById('PhotoModal');
+		PhotoModal.addEventListener('show.bs.modal', event => {
+			const target = event.relatedTarget;
+			const imgSrc = $(target).attr('data-bs-src');
+			const modalImage = PhotoModal.querySelector('.madal-img')
+			$(modalImage).attr('src', imgSrc);
 		})
 	}
 }

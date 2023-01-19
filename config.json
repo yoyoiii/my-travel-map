@@ -5,6 +5,31 @@
 		"favicon": "favicon.ico"
 	},
 	"main": {
-
+		"travel_photos": [
+			"63c8e612be43e0d30e659983.jpg",
+			"63c8e612be43e0d30e65999a.jpg",
+			"63c8e612be43e0d30e6599af.jpg",
+			"63c8e612be43e0d30e6599d7.jpg",
+			"63c8e612be43e0d30e6599f2.jpg",
+			"63c8e612be43e0d30e659983.jpg",
+			"63c8e6a4be43e0d30e6696ee.jpg",
+			"63c8e6a4be43e0d30e6696fe.jpg",
+			"63c8e6a5be43e0d30e66971b.jpg",
+			"63c8e6a5be43e0d30e669726.jpg",
+			"63c8e6c1be43e0d30e66c697.jpg",
+			"63c8e6c1be43e0d30e66c6a0.jpg",
+			"63c8e6c1be43e0d30e66c6ad.jpg",
+			"63c8e6c1be43e0d30e66c6c2.jpg",
+			"63c8e6c1be43e0d30e66c6cf.jpg",
+			"63c8e6e4be43e0d30e66f91f.jpg",
+			"63c8e6e4be43e0d30e66f92c.jpg",
+			"63c8e6e4be43e0d30e66f93b.jpg",
+			"63c8e6e4be43e0d30e66f960.jpg",
+			"63c8e6e4be43e0d30e66f967.jpg",
+			"63c8e71bbe43e0d30e67400a.jpg",
+			"63c8e71bbe43e0d30e674017.jpg",
+			"63c8e71bbe43e0d30e67402c.jpg",
+			"63c8e71bbe43e0d30e674048.jpg"
+		]
 	}
 }
