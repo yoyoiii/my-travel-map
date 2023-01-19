@@ -116,7 +116,6 @@ let page = {
 			autoplay: {
 				delay: 0,
 				disableOnInteraction: false,
-				// waitForTransition: false,
 			},
 			speed: 5000,
 			loop: true,
